@@ -1,0 +1,7 @@
+fvcore
+cloudpickle
+omegaconf
+pycocotools
+fairscale
+timm
+opencv-python
