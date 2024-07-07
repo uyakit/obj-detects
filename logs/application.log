@@ -1,14 +1,3 @@
-[2024-07-06T09:13:32.637] [INFO] application - Application listening at :3000
-[2024-07-06T10:39:13.746] [INFO] application - Application listening at :3000
-[2024-07-06T11:57:53.061] [INFO] application - Application listening at :3000
-[2024-07-06T12:06:02.519] [ERROR] application - EPERM: operation not permitted, copyfile 'C:\Users\uyasp\Desktop\Node.js\Express.js\obj-detects.js\obj-detects_PanopticSegmentation.png' -> 'C:\Users\uyasp\Desktop\Node.js\Express.js\obj-detects.js\app\detectron2\obj-detects_PanopticSegmentation.png'
-[2024-07-06T12:16:20.118] [INFO] application - Application listening at :3000
-[2024-07-06T12:35:02.091] [INFO] application - Application listening at :3000
-[2024-07-06T14:15:29.081] [INFO] application - Application listening at :3000
-[2024-07-06T14:35:13.427] [INFO] application - Application listening at :3000
-[2024-07-06T14:40:27.024] [ERROR] application - Cannot read properties of undefined (reading 'path')
-[2024-07-06T14:40:53.841] [INFO] application - Application listening at :3000
-[2024-07-06T14:52:43.697] [INFO] application - Application listening at :3000
-[2024-07-06T15:11:27.287] [INFO] application - Application listening at :3000
-[2024-07-06T15:21:49.483] [INFO] application - Application listening at :3000
-[2024-07-06T15:31:26.959] [INFO] application - Application listening at :3000
+[2024-07-07T10:28:26.534] [INFO] application - Application listening at :3000
+[2024-07-07T11:34:00.049] [INFO] application - Application listening at :3000
+[2024-07-07T11:40:04.608] [INFO] application - Application listening at :3000

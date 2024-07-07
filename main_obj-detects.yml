@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'obj-detects'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA549341D3824EA4A19983D04456AB65 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CF3B932C882B43F2A5D48AE1593480AB }}
           package: .

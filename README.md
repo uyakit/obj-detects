@@ -39,10 +39,16 @@ Available now; No more additional installations needed.
 ![](obj-detects.gif){ width=90% }
 <br>
 <br>
-### License
-This readme is made with [Pandoc(3.1.8)](https://github.com/jgm/pandoc) with [easy pandoc templates](https://github.com/ryangrose/easy-pandoc-templates)
 
-| Name | Model |
-| :-: | :------------ |
-| [contourpy](https://github.com/contourpy/contourpy) | 1.2.0 |
-| [contourpy](https://github.com/contourpy/contourpy) | 1.2.0 |
+
+### Pretrained models used
+
+For details, visit [the original site](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#coco-instance-segmentation-baselines-with-mask-r-cnn).
+
+
+| Name | Model | Link |
+| :-: | :------------ | :------------ |
+| InstanceSegmentation | [Mask R-CNN: R50-FPN(3x) [137849600]](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#coco-instance-segmentation-baselines-with-mask-r-cnn) |  [model_final_f10217.pkl](https://dl.fbaipublicfiles.com/detectron2/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl) |
+| Keypoints | [Keypoint R-CNN: R101-FPN(3x) [138363331]](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#coco-person-keypoint-detection-baselines-with-keypoint-r-cnn) |  [model_final_997cc7.pkl](https://dl.fbaipublicfiles.com/detectron2/COCO-Keypoints/keypoint_rcnn_R_101_FPN_3x/138363331/model_final_997cc7.pkl)  |
+| PanopticSegmentation | [Panoptic FPN: R50-FPN(3x) [139514569]](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#coco-panoptic-segmentation-baselines-with-panoptic-fpn) |  [model_final_c10459.pkl](https://dl.fbaipublicfiles.com/detectron2/COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/139514569/model_final_c10459.pkl)  |
+| Detection | [Faster R-CNN: R50-FPN(3x) [137849458]](https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md#faster-r-cnn) | [model_final_280758.pkl](https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl)  |

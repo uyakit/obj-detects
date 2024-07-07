@@ -43,8 +43,11 @@ function exec_detectron2(path_png)
 {
 	let fname_png = path.basename(path_png)
 	// ------------------------------------------------------
-	// Detect obj. w/ Detectron2
+	// ## For usual Windows
 	subproc.execSync('"' + path.join(path.resolve(''), '/app/detectron2/detectron2.cmd') + '"  "' + path_png + '"');
+	// ------------------------------------------------------
+	// ## For Azure Web Apps
+	// subproc.execSync('sh /app/detectron2/detectron2_WebApps.sh ' + path_png + '');
 	// ------------------------------------------------------
 }
 //==================================================================
