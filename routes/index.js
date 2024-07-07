@@ -42,12 +42,8 @@ function copyf(path_from, path_to)
 function exec_detectron2(path_png)
 {
 	let fname_png = path.basename(path_png)
-	// ------------------------------------------------------
-	// ## For usual Windows
+	// ------------------------------------------------------ Windows
 	subproc.execSync('"' + path.join(path.resolve(''), '/app/detectron2/detectron2.cmd') + '"  "' + path_png + '"');
-	// ------------------------------------------------------
-	// ## For Azure Web Apps
-	// subproc.execSync('"' + path.join(path.resolve(''), '/app/detectron2/detectron2_WebApps.cmd') + '"  "' + path_png + '"');
 	// ------------------------------------------------------
 }
 //==================================================================
