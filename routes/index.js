@@ -42,7 +42,7 @@ function copyf(path_from, path_to)
 function exec_detectron2(path_png)
 {
 	let fname_png = path.basename(path_png)
-	// ------------------------------------------------------ Windows
+	// ------------------------------------------------------
 	subproc.execSync('"' + path.join(path.resolve(''), '/app/detectron2/detectron2.cmd') + '"  "' + path_png + '"');
 	// ------------------------------------------------------
 }
