@@ -47,7 +47,7 @@ function exec_detectron2(path_png)
 	// ------------------------------------------------------
 }
 //==================================================================
-function clearPngMshStl_init(dir)
+function clearZipPngCsv_init(dir)
 {
 	const arrDirFiles = fs.readdirSync(dir, { withFileTypes: true });
 	const arrFiles = arrDirFiles.filter(dirent => dirent.isFile()).map(({ name }) => name);
@@ -58,8 +58,8 @@ function clearPngMshStl_init(dir)
 									|| path.basename(fname) == 'obj-detects_PanopticSegmentation.png'
 									|| path.basename(fname) == 'obj-detects_Keypoints.png'
 									|| path.basename(fname) == 'obj-detects_Detection.png'
-									|| path.parse(fname).ext == ".msh"
-									|| path.parse(fname).ext == ".stl") {
+									|| path.parse(fname).ext == ".zip"
+									|| path.parse(fname).ext == ".csv") {
 			
 			fs.unlink(path.join(dir, fname), (error) => {
 				if (error != null) {
@@ -72,14 +72,14 @@ function clearPngMshStl_init(dir)
 	});
 }
 //==================================================================
-function clearPngMshStl_all(dir)
+function clearZipPngCsv_all(dir)
 {
 	const arrDirFiles = fs.readdirSync(dir, { withFileTypes: true });
 	// ------------------------------------------------------
 	const arrFiles = arrDirFiles.filter(dirent => dirent.isFile()).map(({ name }) => name);
 	
 	arrFiles.forEach(fname => {
-		if (path.parse(fname).ext == ".zip" || path.parse(fname).ext == ".png" || path.parse(fname).ext == ".msh" || path.parse(fname).ext == ".stl") {
+		if (path.parse(fname).ext == ".zip" || path.parse(fname).ext == ".png" || path.parse(fname).ext == ".csv") {
 			fs.unlink(path.join(dir, fname), (err) => {
 				if (err != null) {
 					console.log(err);
@@ -110,7 +110,7 @@ function clearPngMshStl_all(dir)
 
 // -------------------------------------------------------------------------------------------
 router.get("/", (req, res) => {
-	clearPngMshStl_all("./app/detectron2/");
+	clearZipPngCsv_all("./app/detectron2/");
 	copyf("blockSpinner.png","./app/detectron2/blockSpinner.png");
 	copyf("obj-detects_InstanceSegmentation.png","./app/detectron2/obj-detects_InstanceSegmentation.png");
 	copyf("obj-detects_PanopticSegmentation.png","./app/detectron2/obj-detects_PanopticSegmentation.png");
@@ -123,7 +123,7 @@ function procSub(req, res, next)
 {
 	let fname_png = path.basename(req.files[0].path)
 	
-	clearPngMshStl_init("./app/detectron2/");
+	clearZipPngCsv_init("./app/detectron2/");
 	// ------------------------------------------------------
 	// sout
 	console.log('# originalname : ' + req.files[0].originalname);
