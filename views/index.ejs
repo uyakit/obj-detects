@@ -180,18 +180,12 @@
 		</div>
 		
 		<script>
-			<!-- https://kuwk.jp/blog/dd/ -->
-			let func;
+			"use strict";
+			// ------------------------------------------------------
 			const btn = document.getElementById('btnSubmit');
 			const box = document.getElementById('spinnerWrap');
 			const dvb = document.getElementById('watchRes');
 			const imb = document.getElementById('blockSpinner');
-			// ------------------------------------------------------
-			if(typeof funcClass === 'undefined') {
-				var funcClass = function(){
-					this.init();
-				}
-			}
 			// ------------------------------------------------------
 			function dateNow() {
 				// https://www.tohoho-web.com/js/date.htm#getset
@@ -259,16 +253,25 @@
 			const imgRes_PanopticSegmentation = document.getElementById('imgRes_PanopticSegmentation');
 			const imgRess_Keypoints = document.getElementById('imgRess_Keypoints');
 			const imgRes_Detection = document.getElementById('imgRes_Detection');
+			// ======================================================
+			// File Uploader   https://kuwk.jp/blog/dd/
+			let func;
+			
+			if(typeof funcClass === 'undefined') {
+				var funcClass = function(){
+					this.init();
+				}
+			}
 			
 			funcClass.prototype = {
-				init: function () {
+				init: () => {
 				},
-				ready: function() {
+				ready: () => {
 					func.setDragFile();
 				},
-				loaded: function() {
+				loaded: () => {
 				},
-				setDragFile: function(){
+				setDragFile: () => {
 					// -------------------------
 					// ドラッグオーバー時
 					document.getElementById('dropArea').addEventListener('dragover', (e) => {
@@ -313,7 +316,7 @@
 					}, false);
 					// -------------------------
 				},
-				setFile: function(file){
+				setFile: (file) => {
 					let ext = file.name.split(".").pop();
 					if(ext == 'png') {
 						if(file.size < (20 * Math.pow(1024, 2))) {
@@ -332,7 +335,7 @@
 						alert('Just .png available !');
 					}
 				},
-				removeFile: function(){
+				removeFile: () => {
 					<!-- let _upFileWrap = document.getElementById('upFileWrap'); -->
 					<!-- _upFileWrap.className = ''; -->
 					<!-- let _name = document.getElementById('file_prop'); -->
@@ -341,7 +344,7 @@
 			};
 			// ------------------------------------------------------
 			func = new funcClass();
-			
+			// ======================================================
 			document.addEventListener('DOMContentLoaded', (e) => {
 				box.style.display = 'none';
 				dvb.style.display = 'none';
